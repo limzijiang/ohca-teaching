@@ -177,6 +177,22 @@
   .two{display:grid;grid-template-columns:1.05fr .95fr;gap:1.8vw;height:100%}
   .note{font-size:.92vw;color:var(--muted);margin-top:1.2vh;font-style:italic}
 
+  /* reference cards */
+  .reflist{display:flex;flex-direction:column;gap:1.05vh;margin-top:.4vh}
+  a.ref{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:1.1vh 1.2vw;transition:.15s}
+  a.ref:hover{border-left-color:var(--red);background:var(--panel2);transform:translateX(4px)}
+  a.ref .rtitle{display:block;color:#fff;font-size:1.1vw;font-weight:700;line-height:1.32}
+  a.ref .rtag{color:var(--teal)}
+  a.ref .rmeta{display:block;color:var(--muted);font-size:.92vw;margin-top:.35vh}
+  a.ref .rmeta i{color:#c3cde6;font-style:italic}
+  a.ref .pmid{color:var(--teal);font-weight:800}
+  a.ref .noidx{color:var(--amber);font-weight:800}
+  span.ref{display:block;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:10px;padding:1.1vh 1.2vw}
+  span.ref .rtitle{display:block;color:#fff;font-size:1.1vw;font-weight:700;line-height:1.32}
+  span.ref .rmeta{display:block;color:var(--muted);font-size:.92vw;margin-top:.35vh}
+  span.ref .rmeta i{color:#c3cde6;font-style:italic}
+  span.ref .noidx{color:var(--amber);font-weight:800}
+
   /* video slides */
   .vtwo{display:grid;grid-template-columns:1.42fr .58fr;gap:1.8vw;height:100%;align-items:center}
   .vwrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000}
@@ -905,27 +921,67 @@
     <div class="foot"><span class="tag">SUMMARY</span><span>Take-home messages</span></div>
   </section>
 
-  <!-- 25 REFERENCES -->
+  <!-- 25 REFERENCES 1 : Epidemiology & Teamwork -->
   <section class="slide">
-    <div class="kicker"><span class="dot"></span>References</div>
-    <h2>資料來源</h2>
+    <div class="kicker"><span class="dot"></span>References 1 / 2 · 點標題可連 PubMed</div>
+    <h2>參考文獻：流行病學與團隊</h2>
     <p class="sub">教學用途；臨床決策請以最新原文指引與各院內規範為準</p>
     <div class="body">
-      <ul class="clean" style="gap:1vh">
-        <li><b>2025 AHA Guidelines for CPR & ECC</b> — Circulation 2025（Part 1 Executive Summary；Part 9 Adult ALS；Part 11 Post–Cardiac Arrest Care）。760 條建議中僅 1.4% Level A。</li>
-        <li><b>COCA Trial</b> — Vallentin MF, et al. Calcium vs placebo in OHCA. <i>JAMA</i> 2021；長期追蹤 <i>Resuscitation</i> 2022。</li>
-        <li><b>DOSE VF Trial</b> — Cheskes S, et al. Defibrillation strategies for refractory VF. <i>NEJM</i> 2022（存活出院 DSED 30.4% vs 標準 13.3%）。</li>
-        <li><b>A-C-L-S 團隊模型</b> — Chong KM, ⋯ Ma MHM（NTUH）. Development and Evaluation of a Novel Resuscitation Teamwork Model for OHCA in the ED. <i>Ann Emerg Med</i> 2025;85:163–178。</li>
-        <li><b>Six-dial Strategy</b> — Mechanical Ventilation during CPR. <i>Indian J Crit Care Med</i> 2020。</li>
-        <li><b>台灣流行病學</b> — Secular trends of OHCA in Taiwan（<i>PLOS ONE</i> 2015）；Updated trends 2017–2021（<i>Resuscitation</i> 2023）。</li>
-        <li><b>全國 chain-of-survival 政策成效</b> — 林皓陽等（NTUH）. National Community Chain-of-Survival Initiatives Are Associated With Improved Bystander CPR Rates and Survival for Cardiac Arrests in Taiwan. Abstract 19190, <i>Circulation</i> 2018;134:A19190。</li>
-        <li><b>新北市數據</b> — 新北市政府消防局；中央社 2024/09/18「OHCA 存活率 11.45%」。</li>
-        <li><b>F1 影片</b> — 教學比喻用途，素材來源 NTUH ED 2024 resus/trauma 教學。</li>
-      </ul>
-      <p class="note">碳酸氫鈉、機械 CPR、ECPR、電擊能量等建議依 2023 focused update 與 2025 AHA 指引；證據等級 (COR) 標示以此為準。</p>
+      <div class="reflist">
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/25875921/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[台灣流行病學]</span> The secular trends in the incidence rate and outcomes of out-of-hospital cardiac arrest in Taiwan — a nationwide population-based study</span>
+          <span class="rmeta">Wang CY, Wang JY, Teng NC, et al. · <i>PLoS One</i>. 2015;10(4):e0122675 · <span class="pmid">PMID 25875921 ↗</span></span>
+        </a>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/38029023/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[趨勢更新]</span> Updated trends in the outcomes of out-of-hospital cardiac arrest from 2017–2021: prior to and during the COVID-19 pandemic</span>
+          <span class="rmeta">Fan CY, Sung CW, Chen CY, et al. · <i>J Am Coll Emerg Physicians Open</i>. 2023;4(6):e13070 · <span class="pmid">PMID 38029023 ↗</span></span>
+        </a>
+        <span class="ref">
+          <span class="rtitle"><span class="rtag" style="color:var(--amber)">[政策成效 · 會議摘要]</span> National Community Chain-of-Survival Initiatives Are Associated With Improved Bystander CPR Rates and Survival for Cardiac Arrests in Taiwan</span>
+          <span class="rmeta">林皓陽 (Lin HY) 等，NTUH · Abstract 19190, <i>Circulation</i>. 2018;134:A19190 · <span class="noidx">AHA 會議摘要，未收錄於 PubMed</span></span>
+        </span>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/39520453/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[A-C-L-S 團隊模型]</span> Development and Evaluation of a Novel Resuscitation Teamwork Model for Out-of-Hospital Cardiac Arrest in the Emergency Department</span>
+          <span class="rmeta">Chong KM, Chou EH, Chiang WC, … Ma MHM (NTUH) · <i>Ann Emerg Med</i>. 2025;85(2):163–178 · <span class="pmid">PMID 39520453 ↗</span></span>
+        </a>
+      </div>
+      <p class="note">新北市在地數據：新北市政府消防局；中央社 2024/09/18「OHCA 康復出院率 11.45%」報導（政府/新聞資料，非 PubMed 收錄）。</p>
     </div>
-    <div class="quip"><span class="lbl">免責</span><span class="skull">💀</span><span>以上數據皆屬實；黑色幽默純屬長期值班之後遺症，不列入任何實證等級，也不建議寫進病歷。</span></div>
-    <div class="foot"><span class="tag">急診教學</span><span>謝謝聆聽 · Questions?</span></div>
+    <div class="quip"><span class="lbl">提示</span><span class="skull">🔗</span><span>標題可點 → 直接開 PubMed。橘色那筆是 AHA 年會摘要，PubMed 查不到，別找了。</span></div>
+    <div class="foot"><span class="tag">急診教學</span><span>References · Epidemiology & Teamwork</span></div>
+  </section>
+
+  <!-- 26 REFERENCES 2 : EBM -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>References 2 / 2 · 點標題可連 PubMed</div>
+    <h2>參考文獻：實證更新</h2>
+    <p class="sub">證據等級 (COR) 依 2025 AHA 指引；碳酸氫鈉／機械 CPR／ECPR／電擊能量亦引自同指引</p>
+    <div class="body">
+      <div class="reflist">
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/41122884/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[2025 指引]</span> Part 9: Adult Advanced Life Support: 2025 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care</span>
+          <span class="rmeta">Wigginton JG, Agarwal S, Bartos JA, et al. · <i>Circulation</i>. 2025 · <span class="pmid">PMID 41122884 ↗</span></span>
+        </a>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/34847226/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[COCA · 鈣]</span> Effect of Intravenous or Intraosseous Calcium vs Saline on Return of Spontaneous Circulation in Adults With Out-of-Hospital Cardiac Arrest: A Randomized Clinical Trial</span>
+          <span class="rmeta">Vallentin MF, Granfeldt A, Meilandt C, et al. · <i>JAMA</i>. 2021;326(22):2268–2276 · <span class="pmid">PMID 34847226 ↗</span></span>
+        </a>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/35917866/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[COCA · 長期追蹤]</span> Effect of calcium vs. placebo on long-term outcomes in patients with out-of-hospital cardiac arrest</span>
+          <span class="rmeta">Vallentin MF, Granfeldt A, Meilandt C, et al. · <i>Resuscitation</i>. 2022;179:21–24 · <span class="pmid">PMID 35917866 ↗</span></span>
+        </a>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/36342151/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[DOSE VF · DSED]</span> Defibrillation Strategies for Refractory Ventricular Fibrillation</span>
+          <span class="rmeta">Cheskes S, Verbeek PR, Drennan IR, et al. · <i>N Engl J Med</i>. 2022;387(21):1947–1956 · <span class="pmid">PMID 36342151 ↗</span></span>
+        </a>
+        <a class="ref" href="https://pubmed.ncbi.nlm.nih.gov/32863648/" target="_blank" rel="noopener">
+          <span class="rtitle"><span class="rtag">[呼吸器六轉盤]</span> "Six-dial Strategy" — Mechanical Ventilation during Cardiopulmonary Resuscitation</span>
+          <span class="rmeta">Sahu AK, Timilsina G, Mathew R, et al. · <i>Indian J Crit Care Med</i>. 2020;24(6):487–489 · <span class="pmid">PMID 32863648 ↗</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">免責</span><span class="skull">💀</span><span>以上數據皆屬實；黑色幽默純屬長期值班之後遺症，不列入任何實證等級，也不建議寫進病歷。謝謝聆聽！</span></div>
+    <div class="foot"><span class="tag">急診教學</span><span>References · EBM · Questions?</span></div>
   </section>
 
 </div>
