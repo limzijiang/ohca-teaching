@@ -274,6 +274,75 @@
     <div class="foot"><span class="tag">EPIDEMIOLOGY</span><span>全國數據</span></div>
   </section>
 
+  <!-- 4b NATIONAL TREND (Lin et al Circulation 2018) -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>全國趨勢 · 政策見效</div>
+    <h2>政策，真的能救命</h2>
+    <p class="sub">2012–2015 全國資料：一連串「生存之鏈」政策上路後，旁觀者 CPR 與存活率同步上升（皆 p&lt;0.001）</p>
+    <div class="body" style="display:flex;flex-direction:column;gap:1.4vh">
+      <svg viewBox="0 0 960 452" style="width:100%;height:auto;max-height:52vh" xmlns="http://www.w3.org/2000/svg" font-family="inherit">
+        <!-- gridlines + y labels -->
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="120" y1="40" x2="900" y2="40"/><line x1="120" y1="140" x2="900" y2="140"/>
+          <line x1="120" y1="240" x2="900" y2="240"/><line x1="120" y1="340" x2="900" y2="340"/>
+          <line x1="120" y1="440" x2="900" y2="440"/>
+        </g>
+        <g fill="var(--muted)" font-size="19" text-anchor="end">
+          <text x="104" y="46">40%</text><text x="104" y="146">30%</text>
+          <text x="104" y="246">20%</text><text x="104" y="346">10%</text><text x="104" y="446">0%</text>
+        </g>
+        <!-- x labels -->
+        <g fill="var(--ink)" font-size="21" font-weight="700" text-anchor="middle">
+          <text x="120" y="480">2012</text><text x="380" y="480">2013</text>
+          <text x="640" y="480">2014</text><text x="900" y="480">2015</text>
+        </g>
+        <!-- policy markers -->
+        <g stroke="var(--red)" stroke-width="1.6" stroke-dasharray="5 5" opacity=".55">
+          <line x1="120" y1="40" x2="120" y2="440"/><line x1="380" y1="40" x2="380" y2="440"/><line x1="510" y1="40" x2="510" y2="440"/>
+        </g>
+        <g font-size="17" font-weight="800" text-anchor="middle">
+          <circle cx="120" cy="30" r="13" fill="var(--red)"/><text x="120" y="36" fill="#fff">1</text>
+          <circle cx="380" cy="30" r="13" fill="var(--red)"/><text x="380" y="36" fill="#fff">2</text>
+          <circle cx="510" cy="30" r="13" fill="var(--red)"/><text x="510" y="36" fill="#fff">3</text>
+        </g>
+        <!-- Bystander CPR -->
+        <polyline points="120,190 380,186 640,150 900,106" fill="none" stroke="var(--blue)" stroke-width="4"/>
+        <g fill="var(--blue)"><circle cx="120" cy="190" r="5"/><circle cx="380" cy="186" r="5"/><circle cx="640" cy="150" r="5"/><circle cx="900" cy="106" r="5"/></g>
+        <g fill="var(--blue)" font-size="19" font-weight="700" text-anchor="middle">
+          <text x="120" y="178">25.0</text><text x="380" y="174">25.4</text><text x="640" y="138">29.0</text><text x="900" y="94">33.4</text>
+        </g>
+        <!-- Compression-only -->
+        <polyline points="120,258 380,252 640,218 900,177" fill="none" stroke="#cbd5f0" stroke-width="3" stroke-dasharray="3 6" stroke-linecap="round"/>
+        <g fill="#cbd5f0"><circle cx="120" cy="258" r="5"/><circle cx="380" cy="252" r="5"/><circle cx="640" cy="218" r="5"/><circle cx="900" cy="177" r="5"/></g>
+        <g fill="#cbd5f0" font-size="18" font-weight="600" text-anchor="middle">
+          <text x="120" y="278">18.2</text><text x="380" y="272">18.8</text><text x="640" y="238">22.2</text><text x="900" y="165">26.3</text>
+        </g>
+        <!-- Survival to discharge -->
+        <polyline points="120,383 380,375 640,378 900,364" fill="none" stroke="var(--teal)" stroke-width="3.5" stroke-dasharray="10 6"/>
+        <g fill="var(--teal)"><circle cx="120" cy="383" r="5"/><circle cx="380" cy="375" r="5"/><circle cx="640" cy="378" r="5"/><circle cx="900" cy="364" r="5"/></g>
+        <g fill="var(--teal)" font-size="18" font-weight="700" text-anchor="middle">
+          <text x="120" y="373">5.7</text><text x="380" y="363">6.5</text><text x="640" y="366">6.2</text><text x="900" y="352">7.6</text>
+        </g>
+        <!-- CPC 1-2 -->
+        <polyline points="120,423 380,418 640,420 900,408" fill="none" stroke="var(--amber)" stroke-width="3.5"/>
+        <g fill="var(--amber)"><circle cx="120" cy="423" r="5"/><circle cx="380" cy="418" r="5"/><circle cx="640" cy="420" r="5"/><circle cx="900" cy="408" r="5"/></g>
+        <g fill="var(--amber)" font-size="18" font-weight="700" text-anchor="middle">
+          <text x="120" y="443">1.7</text><text x="380" y="438">2.2</text><text x="640" y="440">2.0</text><text x="900" y="428">3.2</text>
+        </g>
+      </svg>
+      <div style="display:flex;gap:1.4vw;flex-wrap:wrap;align-items:center;font-size:1vw;color:var(--muted)">
+        <span><b style="color:var(--blue)">▬</b> 旁觀者 CPR 比率</span>
+        <span><b style="color:#cbd5f0">┈</b> 純壓胸 CPR 比率</span>
+        <span><b style="color:var(--teal)">╌</b> 存活出院比率</span>
+        <span><b style="color:var(--amber)">▬</b> 存活且可生活自理 (CPC 1–2)</span>
+        <span style="margin-left:auto;color:var(--red);font-weight:700">政策 ① 推動純壓胸 CPR　② 119 派遣員指導 CPR　③ 公眾電擊器法／好薩瑪利亞人法</span>
+      </div>
+      <p class="note">資料來源：林皓陽等，Abstract 19190, Circulation 2018;134:A19190（NTUH 急診）。* 四項趨勢皆 p&lt;0.001（chi-squared for trend）。</p>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">📜</span><span>救活一個 OHCA，有時靠的不是你的手，而是三年前立法院通過的一條法案。</span></div>
+    <div class="foot"><span class="tag">EPIDEMIOLOGY</span><span>National trend 2012–2015</span></div>
+  </section>
+
   <!-- 5 NEW TAIPEI -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>新北市</div>
@@ -849,6 +918,7 @@
         <li><b>A-C-L-S 團隊模型</b> — Chong KM, ⋯ Ma MHM（NTUH）. Development and Evaluation of a Novel Resuscitation Teamwork Model for OHCA in the ED. <i>Ann Emerg Med</i> 2025;85:163–178。</li>
         <li><b>Six-dial Strategy</b> — Mechanical Ventilation during CPR. <i>Indian J Crit Care Med</i> 2020。</li>
         <li><b>台灣流行病學</b> — Secular trends of OHCA in Taiwan（<i>PLOS ONE</i> 2015）；Updated trends 2017–2021（<i>Resuscitation</i> 2023）。</li>
+        <li><b>全國 chain-of-survival 政策成效</b> — 林皓陽等（NTUH）. National Community Chain-of-Survival Initiatives Are Associated With Improved Bystander CPR Rates and Survival for Cardiac Arrests in Taiwan. Abstract 19190, <i>Circulation</i> 2018;134:A19190。</li>
         <li><b>新北市數據</b> — 新北市政府消防局；中央社 2024/09/18「OHCA 存活率 11.45%」。</li>
         <li><b>F1 影片</b> — 教學比喻用途，素材來源 NTUH ED 2024 resus/trauma 教學。</li>
       </ul>
