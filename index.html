@@ -193,6 +193,43 @@
   span.ref .rmeta i{color:#c3cde6;font-style:italic}
   span.ref .noidx{color:var(--amber);font-weight:800}
 
+  /* COR catalog dense tables */
+  .corwrap{display:grid;grid-template-columns:1fr 1fr;gap:0 1.9vw;align-content:start}
+  .corwrap.one{grid-template-columns:1fr}
+  .corcol{display:flex;flex-direction:column}
+  .corgrp{font-size:.98vw;font-weight:800;color:var(--teal);margin:.7vh 0 .2vh;letter-spacing:.02em;display:flex;align-items:center;gap:.4vw}
+  .corgrp::before{content:"";width:.55vw;height:.55vw;background:var(--teal);border-radius:2px;transform:rotate(45deg)}
+  .crow{display:flex;align-items:flex-start;gap:.55vw;padding:.36vh 0;border-bottom:1px solid rgba(44,57,88,.55)}
+  .crow .ct{flex:1;font-size:.87vw;line-height:1.24;color:#d3ddf0}
+  .crow .ct b{color:#fff}
+  .cbx{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;gap:.05vh;margin-top:.05vh;min-width:2.6vw}
+  .cb{font-size:.72vw;font-weight:800;padding:.1em .42em;border-radius:5px;white-space:nowrap}
+  .cb.c1{background:rgba(74,222,128,.16);color:var(--green);border:1px solid rgba(74,222,128,.45)}
+  .cb.c2a{background:rgba(90,160,255,.16);color:var(--blue);border:1px solid rgba(90,160,255,.45)}
+  .cb.c2b{background:rgba(255,194,75,.14);color:var(--amber);border:1px solid rgba(255,194,75,.45)}
+  .cb.c3{background:rgba(255,130,95,.14);color:#ff9d6b;border:1px solid rgba(255,140,95,.5)}
+  .cb.c3h{background:rgba(255,81,99,.2);color:var(--red);border:1px solid rgba(255,81,99,.6)}
+  .cbx .loe{color:var(--muted);font-size:.64vw;font-weight:600}
+  .corhint{font-size:.82vw;color:var(--muted);margin-bottom:.6vh}
+  .corhint b{color:#fff}
+
+  /* FOAMed cards */
+  .foam{display:grid;grid-template-columns:1fr 1fr;gap:1.1vh 1.4vw;align-content:start}
+  .fcard{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:1.2vh 1.1vw;box-shadow:var(--shadow)}
+  .fcard.good{border-left-color:var(--green)}
+  .fcard.warn{border-left-color:var(--amber)}
+  .fcard h3{font-size:1.12vw;margin-bottom:.4vh;display:flex;align-items:center;gap:.4vw}
+  .fcard h3 .trial{font-size:.78vw;font-weight:800;color:var(--teal);border:1px solid var(--line);border-radius:5px;padding:.05em .4em}
+  .fcard p{font-size:.9vw;color:var(--muted);line-height:1.4}
+  .fcard p b{color:#fff}
+  .fcard .src{margin-top:.5vh;display:flex;flex-wrap:wrap;gap:.35vw}
+  .fcard .src a{font-size:.76vw;font-weight:700;text-decoration:none;padding:.08em .45em;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
+  .fcard .src a:hover{border-color:var(--red);color:#fff}
+  .fcard .src a.pm{color:var(--teal);border-color:rgba(49,208,198,.4)}
+  .fcard .src a.em{color:#ff8fa0}
+  .fcard .src a.f10{color:#8fb8ff}
+  .fcard .src a.rb{color:#c6a3ff}
+
   /* video slides */
   .vtwo{display:grid;grid-template-columns:1.42fr .58fr;gap:1.8vw;height:100%;align-items:center}
   .vwrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000}
@@ -903,6 +940,356 @@
     </div>
     <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🏦</span><span>把心跳壓回來只是頭期款；神經功能的預後，才是那筆三十年、還不一定繳得完的房貸。</span></div>
     <div class="foot"><span class="tag">EVIDENCE</span><span>Post-cardiac arrest care</span></div>
+  </section>
+
+  <!-- COR CATALOG LEAD -->
+  <section class="slide divider">
+    <div class="body" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="num" style="background:linear-gradient(120deg,var(--panel2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent">COR</div>
+      <h2 style="font-size:3.6vw">2025 AHA · OHCA 建議全覽</h2>
+      <p>把 2025 AHA 指引中與成人 OHCA 相關、<b style="color:#fff">所有帶 COR 的建議</b>整理成一份速查表 — BLS、去顫、藥物、氣道、ECPR、特殊病因、系統與 ROSC 後照護。</p>
+      <div style="display:flex;gap:.8vw;flex-wrap:wrap;margin-top:2vh;font-size:1vw">
+        <span class="cb c1" style="font-size:1vw">COR 1 強：該做</span>
+        <span class="cb c2a" style="font-size:1vw">2a 中等：合理</span>
+        <span class="cb c2b" style="font-size:1vw">2b 弱：可考慮/未確立</span>
+        <span class="cb c3" style="font-size:1vw">3·NB 無益</span>
+        <span class="cb c3h" style="font-size:1vw">3·H 有害</span>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">📑</span><span>接下來六頁是速查表——投影時大概沒人看得完，但它會是你之後偷偷截圖存手機的那幾頁。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>COR catalog · OHCA</span></div>
+  </section>
+
+  <!-- COR 1: BLS & HQ-CPR -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (1/6)</div>
+    <h2 style="font-size:2.5vw">BLS 與高品質 CPR</h2>
+    <p class="corhint">綠 <b>1</b> · 藍 <b>2a</b> · 黃 <b>2b</b> · 橘 <b>3·NB</b> 無益 · 紅 <b>3·H</b> 有害　（右側小字為 LOE 證據等級）</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">高品質 CPR</div>
+        <div class="crow"><span class="ct"><b>辨識</b>：無反應＋無呼吸/僅喘息 → 當作心跳停止</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>求救</b>：單人先啟動緊急反應，再開始 CPR</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>按壓深度</b> ≥5 cm，避免過深</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>按壓速率</b> 100–120/分</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>完全回彈</b> chest recoil</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>最小化中斷</b>：電擊前後 pause 最短</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>CCF</b> 按壓分率 ≥60%</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>30:2</b>（無進階氣道，lay & HCP）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>純壓胸 CPR</b>（所有一般民眾）</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>通氣量</b>：足以見胸廓起伏</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>進階氣道下</b> 通氣 10/分（1 次/6 秒）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">去顫器就位前 <b>持續 CPR</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">取 AED 時先 <b>短暫 CPR</b>（未監測者）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">派遣員 (T-CPR) 與社區系統</div>
+        <div class="crow"><span class="ct"><b>T-CPR 指導＝純壓胸</b>（成人 OHCA）</span><span class="cbx"><span class="cb c1">1</span><span class="loe">A</span></span></div>
+        <div class="crow"><span class="ct">派遣員應<b>指導民眾開始 CPR</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">先<b>定位事發地點</b>再問診，同步派遣</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">T-CPR 辨識/指導納入<b>品質管理</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>影像輔助派遣</b>（有能力系統）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>公眾 naloxone</b> 政策/善意免責</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">Naloxone <b>發放計畫</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>PAD 公眾去顫</b>（高風險社區）</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">社區 CPR <b>整合方案 (bundle)</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">普及<b>講師培訓</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>行動響應者</b>召集科技</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>大眾媒體</b>推廣 CPR 學習</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">強制<b>公眾 CPR 認證</b></span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">重點</span><span class="skull">🅰️</span><span>整份指引僅 1.4% 是 Level A——而「派遣員教純壓胸」就是其中一條。簡單的事，證據最硬。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>BLS & High-quality CPR</span></div>
+  </section>
+
+  <!-- COR 2: Defib + Access + Drugs -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (2/6)</div>
+    <h2 style="font-size:2.5vw">去顫 · 血管通路 · 藥物</h2>
+    <p class="corhint">大多數藥物證據薄弱；<b>鈣、碳酸氫鈉、鎂、高劑量 epi、vasopressin</b> 皆列 3·NB（常規無益）</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">去顫</div>
+        <div class="crow"><span class="ct"><b>早期去顫</b>：已就位之目擊 VF/pVT 立即電</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>雙相波</b>優於單相波</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>單次電擊</b>優於連續堆疊電擊</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">後續電擊<b>升高能量</b>可考慮</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">固定 vs 遞增能量 依廠商規格</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>Vector change</b>（≥3 電擊後）未確立</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>DSED 雙序列去顫</b>（≥3 電擊後）未確立</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="corgrp">血管通路</div>
+        <div class="crow"><span class="ct"><b>先 IV</b> 靜脈通路</span><span class="cbx"><span class="cb c1">1</span><span class="loe">A</span></span></div>
+        <div class="crow"><span class="ct"><b>IO 骨內</b>：IV 失敗/不可行時合理</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">A</span></span></div>
+        <div class="crow"><span class="ct"><b>中央靜脈</b>：IV+IO 皆失敗（受訓者）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">藥物</div>
+        <div class="crow"><span class="ct"><b>Epinephrine</b> 給予</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">劑量 <b>1 mg 每 3–5 分</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">時機·<b>不可電擊</b>：儘早給</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">時機·<b>可電擊</b>：初次去顫失敗後</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>高劑量 epi</b> 常規</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>Vasopressin</b>（單獨/加）取代 epi</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>Amiodarone/Lidocaine</b>（難治 VF/pVT）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">β-blocker/bretylium/procainamide/sotalol</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">類固醇（intra-arrest）效益不明</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>鈣</b>（常規）</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>碳酸氫鈉</b>（常規）</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>鎂</b>（常規）</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">💊</span><span>急救車那格「壓箱寶」——鈣、碳酸氫鈉、鎂——在 2025 指引裡並排坐著同一張椅子：3·NB。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>Defibrillation · Access · Drugs</span></div>
+  </section>
+
+  <!-- COR 3: Airway + Monitoring + Mechanical + ECPR -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (3/6)</div>
+    <h2 style="font-size:2.5vw">氣道通氣 · 監測技術 · 機械CPR · ECPR</h2>
+    <p class="corhint">Head-up CPR 與機械 CPR 常規使用皆 <b>3·NB</b>；ECPR 以「系統與選擇」為主軸（2a）</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">氣道與通氣</div>
+        <div class="crow"><span class="ct"><b>ETI</b> 需足夠經驗/定期再訓練</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>進階氣道時機</b>：若中斷壓胸則延後</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>波形 capnography</b> 確認/監測氣管內管</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>SGA</b>（插管成功率低之場域）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">SGA 或 ETT 皆可（高成功率場域）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>BVM</b> vs 進階氣道 皆可考慮</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">CPR 中<b>最大吸入氧濃度</b></span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">Capnography 突升<b>偵測 ROSC</b></span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">監測與 CPR 技術</div>
+        <div class="crow"><span class="ct"><b>動脈導管</b>偵測 ROSC/組織性節律</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">POCUS 找可逆病因 未確立</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">POC echo 預後判斷 未確立</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>Head-up CPR</b>：僅限臨床試驗</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>機械 CPR</b>：常規使用不建議</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="corgrp">ECPR（系統面）</div>
+        <div class="crow"><span class="ct">建立並定期檢討<b>選擇標準</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">周邊<b>插管者需具經驗</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>區域化</b> ECPR 合理</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">為 ECPR <b>心跳中轉送</b>（高度選擇）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🙃</span><span>把病人的頭抬高並不會讓靈魂比較容易上天堂——Head-up CPR 目前只准出現在論文裡。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>Airway · Monitoring · Devices · ECPR</span></div>
+  </section>
+
+  <!-- COR 4: Cause-specific + Systems -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (4/6)</div>
+    <h2 style="font-size:2.5vw">特殊病因 · 系統 / TOR / 器捐</h2>
+    <p class="corhint">注意唯一的 <b class="hlr">3·H（有害）</b>：未插管者不可用單一 ETCO₂ 數值當終止急救依據</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">特殊病因 (Part 10)</div>
+        <div class="crow"><span class="ct"><b>鴉片-呼吸停止</b>：給 naloxone</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct">鴉片-心跳停止：naloxone（不中斷 CPR）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct"><b>高血鉀</b>：鈣 ±碳酸氫鈉（效益不定）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct"><b>可逆病因 ECLS</b>（PE/低溫/中毒/過敏/氣喘…）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct"><b>孕婦</b>：復甦性剖腹 5 分內娩出胎兒</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>溺水</b>：CPR 含人工呼吸＋壓胸</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">溺水：受訓者<b>儘早給氧</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct">溺水：先 CPR 再上 AED</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">溺水：無法給氣則純壓胸/AED 合理</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">系統 · TOR · 器官捐贈</div>
+        <div class="crow"><span class="ct">EMS <b>現場終止 (TOR) 準備</b>＋死亡告知訓練</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>Stay-and-play</b>：現場復甦至 ROSC 再轉送</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>BLS TOR rule</b>（無/延遲 ALS 時）</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>ALS TOR rule</b> 現場可用</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">Universal TOR rule（分層系統）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>未插管者不以 ETCO₂ 數值終止急救</b></span><span class="cbx"><span class="cb c3h">3·H</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct">轉送<b>心臟停止中心</b>（本地無綜合照護時）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">死亡病人<b>評估器官捐贈</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">建立器捐 SOC / <b>資料登錄 registry</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">OHCA 有 <b>ALS 醫師在場</b>有益</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">確保<b>足夠團隊人數</b>分配角色</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">⚖️</span><span>整份指引只有一條「有害」等級——用一個 ETCO₂ 數字決定放棄一條命。數字很方便，但別讓它替你做決定。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>Special circumstances · Systems</span></div>
+  </section>
+
+  <!-- COR 5: Post-ROSC oxygenation/ventilation/BP/TTM -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (5/6)</div>
+    <h2 style="font-size:2.5vw">ROSC 後 (1)：氧合 · 通氣 · 血壓 · 溫控</h2>
+    <p class="corhint">TTM 新框架：主動溫控 <b>32–37.5°C</b>（COR 1）＋積極<b>避免發燒</b>；院前快速冷輸液 3·NB</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">氧合 · 通氣 · 血壓</div>
+        <div class="crow"><span class="ct">先 <b>100% O₂</b> 直到可靠測量</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct"><b>避免低血氧</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">FiO₂ 滴定 <b>SpO₂ 90–98%</b>（避免高/低氧）</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">留意深膚色<b>脈氧誤差</b></span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct"><b>PaCO₂ 正常 35–45</b> mmHg</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">查血氣評估 PaCO₂</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>避免低血壓，MAP ≥65</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">無特定升壓劑建議</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">溫控 (TTM)</div>
+        <div class="crow"><span class="ct">所有 ROSC 後昏迷者 <b>主動溫控</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">維持 <b>32–37.5°C</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">溫控維持 <b>≥36 小時</b></span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">院前冷卻（非冷輸液）效益不明</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">避免<b>快速回溫</b> &gt;0.5°C/hr</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">高風險亞群特定目標溫度 不明</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>院前快速冷輸液</b>（常規）</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🌡️</span><span>十年前我們拚命把病人冰到 33°C，現在指引說「別發燒就好」。醫學的謙卑，都寫在改過的指引裡。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>Post-ROSC · Oxygen/Vent/BP/Temp</span></div>
+  </section>
+
+  <!-- COR 6: Post-ROSC angio/seizure/neuroprog/MCS -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (6/6)</div>
+    <h2 style="font-size:2.5vw">ROSC 後 (2)：冠脈 · 癲癇 · 神經預後 · MCS</h2>
+    <p class="corhint">神經預後：<b>多模態、≥72 小時、排除藥物干擾</b>，永遠別靠單一指標下定論</p>
+    <div class="body corwrap">
+      <div class="corcol">
+        <div class="corgrp">診斷 · 冠脈 · 癲癇</div>
+        <div class="crow"><span class="ct">ROSC 後儘速 <b>12 導程 ECG</b></span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">Head-to-pelvis CT 找病因</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>持續 ST 上升→緊急冠脈攝影</b>（不論昏迷）</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">疑心因（可電擊等）出院前攝影</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">選定 non-STE＋休克/復發 VA/缺血 緊急攝影</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">無 STE/休克…常規緊急攝影 不建議</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">非罪犯血管立即再灌流 不建議</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">不從命令者 儘速 <b>EEG</b>；治療臨床癲癇</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-LD</span></span></div>
+        <div class="crow"><span class="ct">治療 EEG-only 癲癇 合理</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-R</span></span></div>
+        <div class="crow"><span class="ct">常規癲癇<b>預防</b> 不建議</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+      </div>
+      <div class="corcol">
+        <div class="corgrp">神經預後 · 機械循環支持</div>
+        <div class="crow"><span class="ct"><b>多模態</b>、勿依單一指標</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">排除<b>藥物/鎮靜干擾</b>再判讀</span><span class="cbx"><span class="cb c1">1</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct"><b>≥72h</b>（常溫、停鎮靜後）綜合判讀</span><span class="cbx"><span class="cb c2a">2a</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">雙側瞳孔光反射消失（預測不良）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">雙側角膜反射消失／定量瞳孔測量</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">高 NSE/NfL（併其他）支持不良</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">保留瞳孔/角膜反射 <b>不能</b>預測良好</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">MCS 由經驗團隊監測管理</span><span class="cbx"><span class="cb c1">1</span><span class="loe">C-EO</span></span></div>
+        <div class="crow"><span class="ct">難治心因性休克 暫時 MCS（高度選擇）</span><span class="cbx"><span class="cb c2b">2b</span><span class="loe">B-NR</span></span></div>
+        <div class="crow"><span class="ct">暫時 MCS <b>常規</b>使用 不建議</span><span class="cbx"><span class="cb c3">3·NB</span><span class="loe">B-R</span></span></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🧠</span><span>神經預後最重要的一條規則：72 小時前別當先知。太早宣判，有時是自我實現的預言。</span></div>
+    <div class="foot"><span class="tag">EVIDENCE · 2025 AHA</span><span>Post-ROSC · Angio/Seizure/Prognosis/MCS</span></div>
+  </section>
+
+  <!-- FOAMED LEAD + BAD/NO-BENEFIT -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>FOAMed 觀點 (1/4) · EMCrit · First10EM · REBEL EM</div>
+    <h2 style="font-size:2.4vw">近五年 FOAMed 怎麼看：無益的介入</h2>
+    <p class="corhint">三大 EBM 部落格的共同主旋律：除了<b>高品質 CPR＋早期去顫</b>，多數附加介入頂多改善 ROSC，救不回「神經完好的存活」</p>
+    <div class="body foam">
+      <div class="fcard warn"><h3>鈣 Calcium <span class="trial">COCA · JAMA 2021</span></h3>
+        <p>ROSC <b>19% vs 27%</b>、趨向有害、提前中止；1 年存活 4.7% vs 9.1%。只留給高血鉀/低血鈣/CCB 中毒。</p>
+        <div class="src"><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/34847226/" target="_blank" rel="noopener">PubMed ↗</a><a class="rb" href="https://rebelem.com/rebel-cast-ep106-the-coca-trial-calcium-in-cardiac-arrest/" target="_blank" rel="noopener">REBEL EM</a><a class="f10" href="https://first10em.com/calcium-for-of-out-hospital-cardiac-arrest-the-coca-trial/" target="_blank" rel="noopener">First10EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>碳酸氫鈉 Bicarbonate</h3>
+        <p>常規 empiric 給予<b>無法改善</b> ROSC 或神經預後；只保留高血鉀、TCA/鈉通道阻斷劑中毒、既存代謝性酸中毒。</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/sodium-bicarbonate-in-cardiac-arrest-management/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>Head-up / ACE-CPR</h3>
+        <p>觀察性資料＋歷史對照。REBEL EM「讀過摘要之外」：所謂益處來自事後時間窗與基線不平衡，<b>無真正效益</b>，僅限研究。</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/heads-up-there-is-no-association-with-improved-outcomes-for-head-up-cpr-why-we-must-read-past-the-abstract/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>機械 CPR (LUCAS/AutoPulse)</h3>
+        <p>與人工按壓相比<b>無存活益處</b>（部分訊號更差）。價值在特殊情境（移動中、導管室、人力不足），非常規取代人手。</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/automated-vs-manual-cpr/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🧹</span><span>FOAMed 這五年幫我們做的，其實是「斷捨離」——把一堆看起來很忙、其實沒用的動作，一個一個丟掉。</span></div>
+    <div class="foot"><span class="tag">FOAMed</span><span>No-benefit interventions</span></div>
+  </section>
+
+  <!-- FOAMED: ROSC up but no neuro benefit -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>FOAMed 觀點 (2/4)</div>
+    <h2 style="font-size:2.4vw">「ROSC 上升，但神經預後沒變好」</h2>
+    <p class="corhint">最容易騙人的一類結果：surrogate 端點（ROSC、入院）漂亮，patient-oriented 端點（神經完好存活）不動</p>
+    <div class="body foam">
+      <div class="fcard warn"><h3>腎上腺素 Epinephrine <span class="trial">PARAMEDIC2</span></h3>
+        <p>ROSC↑、入院↑，但<b>神經完好存活無改善</b>（3.2% vs 2.4%，好神經預後未增）。FOAMed 質疑常規角色；時機仍照指引。</p>
+        <div class="src"><a class="f10" href="https://first10em.com/paramedic2/" target="_blank" rel="noopener">First10EM</a><a class="rb" href="https://rebelem.com/rebel-cast-ep56-paramedic-2-time-to-abandon-epinephrine-in-ohca/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>Vasopressin＋類固醇 <span class="trial">VAM-IHCA</span></h3>
+        <p>ROSC↑（42% vs 33%，NNT~11），但<b>存活/神經預後無改善</b>（30 天存活數字更低）。指引未採納。（IHCA 資料，藥理相關）</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/rebel-cast-ep104-vam-ihca-vasopressin-and-methylprednisolone-for-in-hospital-cardiac-arrest/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>ROSC 後常規 pan-CT <span class="trial">CT FIRST</span></h3>
+        <p>診斷率↑（92% vs 75%）但<b>存活無改善</b>（42% vs 44%）。不建議常規全身 CT，保留給明確指徵。</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/the-ct-first-trial-should-we-pan-ct-after-rosc/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>IV vs IO 路徑 <span class="trial">PARAMEDIC3 · IVIO</span></h3>
+        <p>30 天存活與 ROSC <b>無差異</b>。First10EM：路徑不是重點，因為「沒有證據顯示任何藥物在心跳停止有效」。指引仍先 IV(1)、IO(2a)。</p>
+        <div class="src"><a class="f10" href="https://first10em.com/iv-versus-io-for-cardiac-arrest-paramedic3-and-ivio/" target="_blank" rel="noopener">First10EM</a></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🎭</span><span>「我們把他救回來了」——心電圖有跳，不代表人回來了。ROSC 是好消息，但別把它當成結局。</span></div>
+    <div class="foot"><span class="tag">FOAMed</span><span>ROSC ≠ neuro-intact survival</span></div>
+  </section>
+
+  <!-- FOAMED: promising / practice-changing -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>FOAMed 觀點 (3/4)</div>
+    <h2 style="font-size:2.4vw">有前景 / 正在改變實務</h2>
+    <p class="corhint">少數真的可能改善 patient-oriented 結果的方向 — 但幾乎都取決於<b>病人選擇、時效與系統</b></p>
+    <div class="body foam">
+      <div class="fcard good"><h3>DSED / Vector change <span class="trial">DOSE-VF · NEJM 2022</span></h3>
+        <p>難治 VF 存活 <b>13.3%→30.4%</b>。EMCrit 力推 AP 貼片＋DSED；First10EM 謹慎（未盲、提前中止）；REBEL EM 偏好較易執行的 vector change。指引 COR 2b。</p>
+        <div class="src"><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/36342151/" target="_blank" rel="noopener">PubMed ↗</a><a class="em" href="https://emcrit.org/emcrit/all-things-defibrillation/" target="_blank" rel="noopener">EMCrit</a><a class="f10" href="https://first10em.com/dose-vf-a-double-sequential-defibrillation-game-changer/" target="_blank" rel="noopener">First10EM</a><a class="rb" href="https://rebelem.com/defibrillation-strategies/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard good"><h3>ECPR / eCPR <span class="trial">ARREST · PRAGUE · INCEPTION</span></h3>
+        <p>ARREST 存活 <b>43% vs 7%</b>（極小、單中心、偏差大）；PRAGUE 與 INCEPTION 為<b>中性</b>結果。前景在於嚴格選擇＋短 low-flow＋成熟系統。</p>
+        <div class="src"><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/33197396/" target="_blank" rel="noopener">ARREST ↗</a><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/35191923/" target="_blank" rel="noopener">PRAGUE ↗</a><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/36720132/" target="_blank" rel="noopener">INCEPTION ↗</a><a class="em" href="https://emcrit.org/emcrit/ecpr-2-0/" target="_blank" rel="noopener">EMCrit</a></div>
+      </div>
+      <div class="fcard good"><h3>氣道：SGA 優先 <span class="trial">AIRWAYS-2 · PART</span></h3>
+        <p>SGA 與 ETT <b>神經預後無差異</b>；SGA 更易、成功率更高。核心訊息：<b>別讓插管中斷早期 CPR 與去顫</b>。</p>
+        <div class="src"><a class="f10" href="https://first10em.com/benger2018/" target="_blank" rel="noopener">First10EM</a><a class="rb" href="https://rebelem.com/rebel-cast-ep-59-airways-2-supraglottic-vs-tracheal-intubation-in-ohca/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard good"><h3>2025 AHA 指引導讀 <span class="trial">EMCrit 412</span></h3>
+        <p>與 DOSE-VF 主持人 Cheskes 逐條解讀：epi 維持 1mg q3–5min；DSED/vector 僅 2b；~80% 的「難治 VF」其實是復發性 VF。</p>
+        <div class="src"><a class="em" href="https://emcrit.org/emcrit/2025-aha-acls-guidelines/" target="_blank" rel="noopener">EMCrit 412</a></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🎣</span><span>ECPR 的故事：單中心報 43% 存活，多中心一做就打回原形。太美的數字，通常是還沒被多中心「毒打」過。</span></div>
+    <div class="foot"><span class="tag">FOAMed</span><span>Promising · practice-changing</span></div>
+  </section>
+
+  <!-- FOAMED: post-arrest debates -->
+  <section class="slide">
+    <div class="kicker"><span class="dot"></span>FOAMed 觀點 (4/4)</div>
+    <h2 style="font-size:2.4vw">ROSC 之後的爭議與共識</h2>
+    <p class="corhint">溫控與氧合/血壓的大型 RCT，把過去十年的「越激進越好」信念，一個個拉回中庸</p>
+    <div class="body foam">
+      <div class="fcard warn"><h3>目標溫度 <span class="trial">TTM2 · NEJM 2021</span></h3>
+        <p>33°C vs 常溫：<b>存活與神經預後無差異</b>，低溫反而更多心律不整/血流動力學傷害。共識：積極<b>避免發燒</b>；EMCrit/PulmCrit 傾向目標 37.5°C。</p>
+        <div class="src"><a class="pm" href="https://pubmed.ncbi.nlm.nih.gov/34133859/" target="_blank" rel="noopener">PubMed ↗</a><a class="em" href="https://emcrit.org/pulmcrit/ttm2/" target="_blank" rel="noopener">PulmCrit</a><a class="f10" href="https://first10em.com/ttm2-the-big-chill-on-therapeutic-hypothermia/" target="_blank" rel="noopener">First10EM</a><a class="rb" href="https://rebelem.com/ttm2-hypothermia-vs-normothermia-for-ohca/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard warn"><h3>血壓 & 氧合目標 <span class="trial">BOX</span></h3>
+        <p>自由 vs 保守氧合、高 (MAP 77) vs 低 (MAP 63) 血壓 <b>皆無差異</b>。實務：SpO₂ ~90–95%、MAP ≥65 即可，保守策略安全。</p>
+        <div class="src"><a class="rb" href="https://rebelem.com/the-box-trial-bp-o2-targets-in-comatose-survivors-of-cardiac-arrest/" target="_blank" rel="noopener">REBEL EM</a></div>
+      </div>
+      <div class="fcard good"><h3>氧合實務（IBCC）</h3>
+        <p>避免 hyperoxia、儘早把 FiO₂ 從 100% 降下來；SpO₂ 94–98%、PaO₂ ~75–100、normocapnia 35–45（低 CO₂ 有害）。</p>
+        <div class="src"><a class="em" href="https://emcrit.org/ibcc/post-arrest/" target="_blank" rel="noopener">EMCrit IBCC</a></div>
+      </div>
+      <div class="fcard good"><h3>神經預後策略</h3>
+        <p>多模態、≥72h、排除干擾。EMCrit 偏好 <b>ESICM 演算法</b>（前瞻驗證、零偽陽性），批評指引缺乏連貫策略。</p>
+        <div class="src"><a class="em" href="https://emcrit.org/pulmcrit/2025-arrest/" target="_blank" rel="noopener">PulmCrit 2025</a></div>
+      </div>
+    </div>
+    <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">❄️</span><span>「治療性低溫」現在最治療的，是我們的執念。RCT 一做，冰塊融了、信仰也融了。</span></div>
+    <div class="foot"><span class="tag">FOAMed</span><span>Post-arrest debates</span></div>
   </section>
 
   <!-- 24 TAKE HOME -->
