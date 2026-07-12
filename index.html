@@ -30,6 +30,7 @@
     background:var(--bg);
     color:var(--ink);
     overflow:hidden;
+    font-size:18px;
     -webkit-font-smoothing:antialiased;
   }
   /* ---------- deck / slides ---------- */
@@ -52,37 +53,37 @@
   h1,h2,h3{line-height:1.12;letter-spacing:.2px}
   .kicker{
     display:inline-flex;align-items:center;gap:.5em;
-    font-size:1.05vw;font-weight:700;letter-spacing:.18em;
+    font-size:max(18px,1.05vw);font-weight:700;letter-spacing:.18em;
     text-transform:uppercase;color:var(--teal);
     margin-bottom:1.6vh;
   }
   .kicker .dot{width:.6em;height:.6em;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red)}
-  .slide h2{font-size:3.0vw;font-weight:800;margin-bottom:.6vh}
-  .slide .sub{color:var(--muted);font-size:1.35vw;margin-bottom:2.6vh;font-weight:500}
-  .body{flex:1;min-height:0}
+  .slide h2{font-size:max(18px,3.0vw);font-weight:800;margin-bottom:.6vh}
+  .slide .sub{color:var(--muted);font-size:max(18px,1.35vw);margin-bottom:2.6vh;font-weight:500}
+  .body{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden}
 
   /* gallows-humor quip line */
   .quip{
     position:absolute;left:5.2vw;right:5.2vw;bottom:5.3vh;
     display:flex;align-items:center;gap:.7vw;
-    font-size:1.02vw;color:#c6b3d8;font-style:italic;line-height:1.4;
+    font-size:max(18px,1.02vw);color:#c6b3d8;font-style:italic;line-height:1.4;
   }
-  .quip .skull{font-style:normal;font-size:1.25vw;filter:saturate(.3)}
+  .quip .skull{font-style:normal;font-size:max(18px,1.25vw);filter:saturate(.3)}
   .quip b{color:var(--amber);font-style:normal;font-weight:700}
-  .quip .lbl{font-style:normal;color:var(--purple);font-weight:800;font-size:.82vw;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(185,139,255,.4);border-radius:6px;padding:.15em .55em;flex-shrink:0}
+  .quip .lbl{font-style:normal;color:var(--purple);font-weight:800;font-size:max(18px,.82vw);letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(185,139,255,.4);border-radius:6px;padding:.15em .55em;flex-shrink:0}
 
   /* footer */
   .foot{
     position:absolute;left:5.2vw;right:5.2vw;bottom:2.4vh;
     display:flex;justify-content:space-between;align-items:center;
-    font-size:.95vw;color:var(--muted);border-top:1px solid var(--line);padding-top:1.2vh;
+    font-size:max(18px,.95vw);color:var(--muted);border-top:1px solid var(--line);padding-top:1.2vh;
   }
   .foot .tag{color:var(--teal);font-weight:700;letter-spacing:.12em}
 
   /* progress bar */
   #prog{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--red),var(--amber),var(--teal));z-index:60;transition:width .35s ease;box-shadow:0 0 12px rgba(255,81,99,.5)}
 
-  #counter{position:fixed;right:1.4vw;bottom:1.1vh;font-size:.85vw;color:var(--muted);z-index:60;font-variant-numeric:tabular-nums}
+  #counter{position:fixed;right:1.4vw;bottom:1.1vh;font-size:max(18px,.85vw);color:var(--muted);z-index:60;font-variant-numeric:tabular-nums}
   .navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:60;width:44px;height:44px;border-radius:50%;
     border:1px solid var(--line);background:rgba(20,26,44,.7);color:var(--ink);cursor:pointer;font-size:20px;
     display:flex;align-items:center;justify-content:center;opacity:.35;transition:.2s;backdrop-filter:blur(4px)}
@@ -100,9 +101,9 @@
     border:1px solid var(--line);border-radius:16px;padding:2.2vh 1.5vw;
     box-shadow:var(--shadow);position:relative;overflow:hidden;
   }
-  .card .ico{font-size:1.9vw;margin-bottom:.8vh;display:block}
-  .card h3{font-size:1.45vw;margin-bottom:.7vh}
-  .card p{color:var(--muted);font-size:1.05vw;line-height:1.55}
+  .card .ico{font-size:max(18px,1.9vw);margin-bottom:.8vh;display:block}
+  .card h3{font-size:max(18px,1.45vw);margin-bottom:.7vh}
+  .card p{color:var(--muted);font-size:max(18px,1.05vw);line-height:1.55}
   .card .edge{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red)}
 
   .stat{
@@ -110,19 +111,19 @@
     border:1px solid var(--line);border-radius:16px;padding:2.4vh 1.4vw;text-align:center;
     box-shadow:var(--shadow);
   }
-  .stat .num{font-size:3.6vw;font-weight:800;line-height:1;background:linear-gradient(120deg,#fff,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .num{font-size:max(18px,3.6vw);font-weight:800;line-height:1;background:linear-gradient(120deg,#fff,var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
   .stat .num.red{background:linear-gradient(120deg,#fff,var(--red));-webkit-background-clip:text}
   .stat .num.amber{background:linear-gradient(120deg,#fff,var(--amber));-webkit-background-clip:text}
-  .stat .lab{color:var(--muted);font-size:1.02vw;margin-top:1vh;line-height:1.45}
-  .stat .unit{font-size:1.4vw;font-weight:700;color:var(--muted)}
+  .stat .lab{color:var(--muted);font-size:max(18px,1.02vw);margin-top:1vh;line-height:1.45}
+  .stat .unit{font-size:max(18px,1.4vw);font-weight:700;color:var(--muted)}
 
   ul.clean{list-style:none;display:flex;flex-direction:column;gap:1.35vh}
-  ul.clean li{position:relative;padding-left:1.9vw;font-size:1.25vw;line-height:1.5;color:#dbe3f4}
+  ul.clean li{position:relative;padding-left:1.9vw;font-size:max(18px,1.25vw);line-height:1.5;color:#dbe3f4}
   ul.clean li::before{content:"";position:absolute;left:0;top:.55em;width:.7vw;height:.7vw;border-radius:3px;background:var(--red);transform:rotate(45deg)}
   ul.clean li b{color:#fff}
-  ul.clean li small{display:block;color:var(--muted);font-size:.95vw;margin-top:.3vh;padding-left:0}
+  ul.clean li small{display:block;color:var(--muted);font-size:max(18px,.95vw);margin-top:.3vh;padding-left:0}
 
-  .tag{display:inline-block;padding:.28em .7em;border-radius:999px;font-size:.9vw;font-weight:800;letter-spacing:.03em;vertical-align:middle}
+  .tag{display:inline-block;padding:.28em .7em;border-radius:999px;font-size:max(18px,.9vw);font-weight:800;letter-spacing:.03em;vertical-align:middle}
   .cor1{background:rgba(74,222,128,.16);color:var(--green);border:1px solid rgba(74,222,128,.4)}
   .cor2a{background:rgba(90,160,255,.16);color:var(--blue);border:1px solid rgba(90,160,255,.4)}
   .cor2b{background:rgba(255,194,75,.16);color:var(--amber);border:1px solid rgba(255,194,75,.4)}
@@ -131,11 +132,11 @@
 
   .trial{display:flex;gap:1.2vw;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.8vh 1.4vw;box-shadow:var(--shadow)}
   .trial .name{min-width:11vw;flex-shrink:0}
-  .trial .name .t{font-size:1.5vw;font-weight:800;color:#fff}
-  .trial .name .j{font-size:.92vw;color:var(--teal);margin-top:.3vh}
+  .trial .name .t{font-size:max(18px,1.5vw);font-weight:800;color:#fff}
+  .trial .name .j{font-size:max(18px,.92vw);color:var(--teal);margin-top:.3vh}
   .trial .find{flex:1}
-  .trial .find p{font-size:1.08vw;color:#dbe3f4;line-height:1.5}
-  .trial .find .bottom{margin-top:.8vh;font-size:1vw;color:var(--muted)}
+  .trial .find p{font-size:max(18px,1.08vw);color:#dbe3f4;line-height:1.5}
+  .trial .find .bottom{margin-top:.8vh;font-size:max(18px,1vw);color:var(--muted)}
   .trial .find .bottom b{color:var(--amber)}
 
   .hl{color:var(--teal);font-weight:700}
@@ -144,52 +145,52 @@
 
   /* title slide */
   .title-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:80%}
-  .title-wrap h1{font-size:5.4vw;font-weight:900;letter-spacing:-1px;margin-bottom:2vh}
+  .title-wrap h1{font-size:max(18px,5.4vw);font-weight:900;letter-spacing:-1px;margin-bottom:2vh}
   .title-wrap h1 .accent{background:linear-gradient(120deg,var(--red),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .title-wrap .lead{font-size:1.7vw;color:var(--muted);line-height:1.5;max-width:46em}
+  .title-wrap .lead{font-size:max(18px,1.7vw);color:var(--muted);line-height:1.5;max-width:46em}
   .pills{display:flex;gap:1vw;margin-top:3.4vh;flex-wrap:wrap}
-  .pill{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:1vh 1.5vw;font-size:1.15vw;font-weight:600;display:flex;align-items:center;gap:.6vw}
+  .pill{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:1vh 1.5vw;font-size:max(18px,1.15vw);font-weight:600;display:flex;align-items:center;gap:.6vw}
   .pill span{color:var(--red);font-weight:800}
   .ecg{position:absolute;right:4vw;top:0;bottom:0;width:34vw;opacity:.5;pointer-events:none}
 
   /* section divider */
   .divider{align-items:flex-start;justify-content:center}
-  .divider .num{font-size:12vw;font-weight:900;line-height:.8;background:linear-gradient(120deg,var(--panel2),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
-  .divider h2{font-size:4.4vw;font-weight:900;margin:1vh 0}
-  .divider p{font-size:1.6vw;color:var(--muted);max-width:36em}
+  .divider .num{font-size:max(18px,12vw);font-weight:900;line-height:.8;background:linear-gradient(120deg,var(--panel2),var(--red));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9}
+  .divider h2{font-size:max(18px,4.4vw);font-weight:900;margin:1vh 0}
+  .divider p{font-size:max(18px,1.6vw);color:var(--muted);max-width:36em}
 
   /* team diagram */
   .team{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5vh 1.4vw;margin-top:1vh}
   .role{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.6vh 1.2vw;position:relative}
   .role.leader{border-color:var(--red);background:linear-gradient(180deg,rgba(255,81,99,.14),var(--bg2))}
-  .role .r{font-size:1.3vw;font-weight:800;color:#fff;display:flex;align-items:center;gap:.5vw}
-  .role .r em{font-style:normal;font-size:1.5vw}
-  .role p{font-size:.98vw;color:var(--muted);margin-top:.6vh;line-height:1.45}
+  .role .r{font-size:max(18px,1.3vw);font-weight:800;color:#fff;display:flex;align-items:center;gap:.5vw}
+  .role .r em{font-style:normal;font-size:max(18px,1.5vw)}
+  .role p{font-size:max(18px,.98vw);color:var(--muted);margin-top:.6vh;line-height:1.45}
 
-  .callout{background:linear-gradient(120deg,rgba(255,81,99,.12),rgba(255,194,75,.06));border:1px solid rgba(255,81,99,.3);border-radius:14px;padding:1.8vh 1.5vw;font-size:1.2vw;line-height:1.55}
+  .callout{background:linear-gradient(120deg,rgba(255,81,99,.12),rgba(255,194,75,.06));border:1px solid rgba(255,81,99,.3);border-radius:14px;padding:1.8vh 1.5vw;font-size:max(18px,1.2vw);line-height:1.55}
   .callout b{color:#fff}
 
   .metricbar{display:flex;gap:1vw;flex-wrap:wrap;margin-top:1.4vh}
   .metricbar .m{flex:1;min-width:9vw;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.4vh 1vw;text-align:center}
-  .metricbar .m .v{font-size:1.9vw;font-weight:800;color:var(--teal)}
-  .metricbar .m .k{font-size:.9vw;color:var(--muted);margin-top:.4vh}
+  .metricbar .m .v{font-size:max(18px,1.9vw);font-weight:800;color:var(--teal)}
+  .metricbar .m .k{font-size:max(18px,.9vw);color:var(--muted);margin-top:.4vh}
 
   .two{display:grid;grid-template-columns:1.05fr .95fr;gap:1.8vw;height:100%}
-  .note{font-size:.92vw;color:var(--muted);margin-top:1.2vh;font-style:italic}
+  .note{font-size:max(18px,.92vw);color:var(--muted);margin-top:1.2vh;font-style:italic}
 
   /* reference cards */
   .reflist{display:flex;flex-direction:column;gap:1.05vh;margin-top:.4vh}
   a.ref{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:1.1vh 1.2vw;transition:.15s}
   a.ref:hover{border-left-color:var(--red);background:var(--panel2);transform:translateX(4px)}
-  a.ref .rtitle{display:block;color:#fff;font-size:1.1vw;font-weight:700;line-height:1.32}
+  a.ref .rtitle{display:block;color:#fff;font-size:max(18px,1.1vw);font-weight:700;line-height:1.32}
   a.ref .rtag{color:var(--teal)}
-  a.ref .rmeta{display:block;color:var(--muted);font-size:.92vw;margin-top:.35vh}
+  a.ref .rmeta{display:block;color:var(--muted);font-size:max(18px,.92vw);margin-top:.35vh}
   a.ref .rmeta i{color:#c3cde6;font-style:italic}
   a.ref .pmid{color:var(--teal);font-weight:800}
   a.ref .noidx{color:var(--amber);font-weight:800}
   span.ref{display:block;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:10px;padding:1.1vh 1.2vw}
-  span.ref .rtitle{display:block;color:#fff;font-size:1.1vw;font-weight:700;line-height:1.32}
-  span.ref .rmeta{display:block;color:var(--muted);font-size:.92vw;margin-top:.35vh}
+  span.ref .rtitle{display:block;color:#fff;font-size:max(18px,1.1vw);font-weight:700;line-height:1.32}
+  span.ref .rmeta{display:block;color:var(--muted);font-size:max(18px,.92vw);margin-top:.35vh}
   span.ref .rmeta i{color:#c3cde6;font-style:italic}
   span.ref .noidx{color:var(--amber);font-weight:800}
 
@@ -197,20 +198,20 @@
   .corwrap{display:grid;grid-template-columns:1fr 1fr;gap:0 1.9vw;align-content:start}
   .corwrap.one{grid-template-columns:1fr}
   .corcol{display:flex;flex-direction:column}
-  .corgrp{font-size:.98vw;font-weight:800;color:var(--teal);margin:.7vh 0 .2vh;letter-spacing:.02em;display:flex;align-items:center;gap:.4vw}
+  .corgrp{font-size:max(18px,.98vw);font-weight:800;color:var(--teal);margin:.7vh 0 .2vh;letter-spacing:.02em;display:flex;align-items:center;gap:.4vw}
   .corgrp::before{content:"";width:.55vw;height:.55vw;background:var(--teal);border-radius:2px;transform:rotate(45deg)}
   .crow{display:flex;align-items:flex-start;gap:.55vw;padding:.36vh 0;border-bottom:1px solid rgba(44,57,88,.55)}
-  .crow .ct{flex:1;font-size:.87vw;line-height:1.24;color:#d3ddf0}
+  .crow .ct{flex:1;font-size:max(18px,.87vw);line-height:1.24;color:#d3ddf0}
   .crow .ct b{color:#fff}
   .cbx{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;gap:.05vh;margin-top:.05vh;min-width:2.6vw}
-  .cb{font-size:.72vw;font-weight:800;padding:.1em .42em;border-radius:5px;white-space:nowrap}
+  .cb{font-size:max(18px,.72vw);font-weight:800;padding:.1em .42em;border-radius:5px;white-space:nowrap}
   .cb.c1{background:rgba(74,222,128,.16);color:var(--green);border:1px solid rgba(74,222,128,.45)}
   .cb.c2a{background:rgba(90,160,255,.16);color:var(--blue);border:1px solid rgba(90,160,255,.45)}
   .cb.c2b{background:rgba(255,194,75,.14);color:var(--amber);border:1px solid rgba(255,194,75,.45)}
   .cb.c3{background:rgba(255,130,95,.14);color:#ff9d6b;border:1px solid rgba(255,140,95,.5)}
   .cb.c3h{background:rgba(255,81,99,.2);color:var(--red);border:1px solid rgba(255,81,99,.6)}
-  .cbx .loe{color:var(--muted);font-size:.64vw;font-weight:600}
-  .corhint{font-size:.82vw;color:var(--muted);margin-bottom:.6vh}
+  .cbx .loe{color:var(--muted);font-size:max(18px,.64vw);font-weight:600}
+  .corhint{font-size:max(18px,.82vw);color:var(--muted);margin-bottom:.6vh}
   .corhint b{color:#fff}
 
   /* FOAMed cards */
@@ -218,12 +219,12 @@
   .fcard{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;padding:1.2vh 1.1vw;box-shadow:var(--shadow)}
   .fcard.good{border-left-color:var(--green)}
   .fcard.warn{border-left-color:var(--amber)}
-  .fcard h3{font-size:1.12vw;margin-bottom:.4vh;display:flex;align-items:center;gap:.4vw}
-  .fcard h3 .trial{font-size:.78vw;font-weight:800;color:var(--teal);border:1px solid var(--line);border-radius:5px;padding:.05em .4em}
-  .fcard p{font-size:.9vw;color:var(--muted);line-height:1.4}
+  .fcard h3{font-size:max(18px,1.12vw);margin-bottom:.4vh;display:flex;align-items:center;gap:.4vw}
+  .fcard h3 .trial{font-size:max(18px,.78vw);font-weight:800;color:var(--teal);border:1px solid var(--line);border-radius:5px;padding:.05em .4em}
+  .fcard p{font-size:max(18px,.9vw);color:var(--muted);line-height:1.4}
   .fcard p b{color:#fff}
   .fcard .src{margin-top:.5vh;display:flex;flex-wrap:wrap;gap:.35vw}
-  .fcard .src a{font-size:.76vw;font-weight:700;text-decoration:none;padding:.08em .45em;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
+  .fcard .src a{font-size:max(18px,.76vw);font-weight:700;text-decoration:none;padding:.08em .45em;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
   .fcard .src a:hover{border-color:var(--red);color:#fff}
   .fcard .src a.pm{color:var(--teal);border-color:rgba(49,208,198,.4)}
   .fcard .src a.em{color:#ff8fa0}
@@ -234,17 +235,17 @@
   .vtwo{display:grid;grid-template-columns:1.42fr .58fr;gap:1.8vw;height:100%;align-items:center}
   .vwrap{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#000}
   .vwrap video{display:block;width:100%;max-height:66vh;object-fit:contain;background:#000}
-  .vwrap .badge{position:absolute;top:1vh;left:1vw;z-index:2;background:rgba(13,18,32,.78);border:1px solid var(--line);border-radius:8px;padding:.3vh .7vw;font-size:.85vw;font-weight:700;color:var(--amber);letter-spacing:.05em;pointer-events:none}
-  .vlesson h3{font-size:1.55vw;margin-bottom:1.2vh;color:#fff}
-  .vlesson .lead{font-size:1.15vw;color:var(--muted);line-height:1.55;margin-bottom:1.6vh}
+  .vwrap .badge{position:absolute;top:1vh;left:1vw;z-index:2;background:rgba(13,18,32,.78);border:1px solid var(--line);border-radius:8px;padding:.3vh .7vw;font-size:max(18px,.85vw);font-weight:700;color:var(--amber);letter-spacing:.05em;pointer-events:none}
+  .vlesson h3{font-size:max(18px,1.55vw);margin-bottom:1.2vh;color:#fff}
+  .vlesson .lead{font-size:max(18px,1.15vw);color:var(--muted);line-height:1.55;margin-bottom:1.6vh}
 
   @media (max-width:900px){
     .slide{padding:3vh 5vw 9.4vh}
-    .kicker{font-size:2.6vw}.slide h2{font-size:6vw}.slide .sub{font-size:3.2vw}
+    .kicker{font-size:max(18px,2.6vw)}.slide h2{font-size:max(18px,6vw)}.slide .sub{font-size:max(18px,3.2vw)}
     .cols-2,.cols-3,.cols-4,.team,.two,.vtwo{grid-template-columns:1fr!important}
-    .card h3{font-size:4vw}.card p,ul.clean li{font-size:3.2vw}
-    .stat .num{font-size:9vw}.trial{flex-direction:column}
-    .quip{font-size:2.5vw}.quip .lbl{font-size:2vw}.vwrap video{max-height:44vh}
+    .card h3{font-size:max(18px,4vw)}.card p,ul.clean li{font-size:max(18px,3.2vw)}
+    .stat .num{font-size:max(18px,9vw)}.trial{flex-direction:column}
+    .quip{font-size:max(18px,2.5vw)}.quip .lbl{font-size:max(18px,2vw)}.vwrap video{max-height:44vh}
   }
 </style>
 </head>
@@ -383,7 +384,7 @@
           <text x="120" y="443">1.7</text><text x="380" y="438">2.2</text><text x="640" y="440">2.0</text><text x="900" y="428">3.2</text>
         </g>
       </svg>
-      <div style="display:flex;gap:1.4vw;flex-wrap:wrap;align-items:center;font-size:1vw;color:var(--muted)">
+      <div style="display:flex;gap:1.4vw;flex-wrap:wrap;align-items:center;font-size:max(18px,1vw);color:var(--muted)">
         <span><b style="color:var(--blue)">▬</b> 旁觀者 CPR 比率</span>
         <span><b style="color:#cbd5f0">┈</b> 純壓胸 CPR 比率</span>
         <span><b style="color:var(--teal)">╌</b> 存活出院比率</span>
@@ -432,7 +433,7 @@
       <div class="card"><span class="ico">🏥</span><div class="edge"></div><h3>④ 高級復甦</h3><p><b style="color:#fff">← 這裡開始是我們</b>：EMTP 給藥、氣道、到院後 ACLS。</p></div>
       <div class="card"><span class="ico">❤️‍🩹</span><div class="edge"></div><h3>⑤ ROSC 後整合照護</h3><p>溫控、冠脈介入、神經預後 — 決定「康復出院」。</p></div>
       <div class="card" style="display:flex;flex-direction:column;justify-content:center;background:linear-gradient(120deg,rgba(255,81,99,.14),var(--bg2))">
-        <p style="font-size:1.25vw;color:#fff;line-height:1.5">環環相扣：任何一環延遲，後面再努力都在追趕。<span class="hlr">存活是團隊接力，不是個人英雄。</span></p>
+        <p style="font-size:max(18px,1.25vw);color:#fff;line-height:1.5">環環相扣：任何一環延遲，後面再努力都在追趕。<span class="hlr">存活是團隊接力，不是個人英雄。</span></p>
       </div>
     </div>
     <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">😴</span><span>生存之鏈最脆弱的一環，通常是凌晨三點還沒睡醒、接起電話的那一環。</span></div>
@@ -500,7 +501,7 @@
     <div class="two body">
       <div style="display:flex;flex-direction:column;justify-content:center">
         <div class="kicker"><span class="dot"></span>Communication</div>
-        <h2 style="font-size:2.7vw">閉環溝通</h2>
+        <h2 style="font-size:max(18px,2.7vw)">閉環溝通</h2>
         <p class="sub" style="margin-bottom:2vh">指令 → 覆誦 → 執行 → 回報。四步驟缺一，藥就可能沒給或給兩次。</p>
         <ul class="clean">
           <li><b>指名下令：</b>「小李，給 1 毫克 adrenaline IV」— 不要對空氣講話。</li>
@@ -512,14 +513,14 @@
       </div>
       <div style="display:flex;flex-direction:column;justify-content:center;gap:1.6vh">
         <div class="card" style="text-align:center;padding:2.6vh 1.5vw">
-          <h3 style="color:var(--teal);font-size:1.6vw">溝通的三個殺手</h3>
+          <h3 style="color:var(--teal);font-size:max(18px,1.6vw)">溝通的三個殺手</h3>
           <ul class="clean" style="margin-top:1.4vh;text-align:left">
             <li>對整個房間喊話，沒有人負責</li>
             <li>多人同時下指令，彼此矛盾</li>
             <li>只說結果不報時間 → 週期亂掉</li>
           </ul>
         </div>
-        <div class="callout" style="font-size:1.15vw">
+        <div class="callout" style="font-size:max(18px,1.15vw)">
           <b>心理安全 (Psychological safety)：</b>任何一位成員發現漏做壓胸、節律看錯、藥給錯，都應該能立即說出來，領導者要歡迎它。
         </div>
       </div>
@@ -591,11 +592,11 @@
       <div class="grid cols-2" style="margin-top:2.4vh">
         <div class="card"><div class="edge" style="background:var(--teal)"></div>
           <h3>Waveform Capnography 是隊友</h3>
-          <p style="font-size:1.1vw">確認氣管內管位置、即時反映按壓品質；ETCO₂ 持續 &lt;10 提示按壓不足或預後差。<b style="color:var(--amber)"> 突然躍升到 35–40 mmHg → 強烈提示 ROSC</b>，不必停下來檢查脈搏。</p>
+          <p style="font-size:max(18px,1.1vw)">確認氣管內管位置、即時反映按壓品質；ETCO₂ 持續 &lt;10 提示按壓不足或預後差。<b style="color:var(--amber)"> 突然躍升到 35–40 mmHg → 強烈提示 ROSC</b>，不必停下來檢查脈搏。</p>
         </div>
         <div class="card"><div class="edge"></div>
           <h3>把中斷降到最低</h3>
-          <p style="font-size:1.1vw">節律判讀前先<b style="color:#fff">預先充電</b>、輪替壓胸在充電時完成、放電後<b style="color:#fff">立即恢復按壓</b>不看脈搏。每一次不必要的 pause 都在讓冠脈灌流壓歸零。</p>
+          <p style="font-size:max(18px,1.1vw)">節律判讀前先<b style="color:#fff">預先充電</b>、輪替壓胸在充電時完成、放電後<b style="color:#fff">立即恢復按壓</b>不看脈搏。每一次不必要的 pause 都在讓冠脈灌流壓歸零。</p>
         </div>
       </div>
     </div>
@@ -635,8 +636,8 @@
       <div class="grid cols-2" style="align-items:stretch">
         <div class="card"><div class="edge" style="background:var(--purple)"></div>
           <h3 style="color:var(--purple)">核心原則</h3>
-          <div style="font-size:1.5vw;font-weight:800;color:#fff;margin:1vh 0;line-height:1.5">1 人 · 1 任務 · 1 工具 · 1 站位 · 1 口訣</div>
-          <p style="font-size:1.05vw">每個人只負責一件事、站固定位置、用固定工具、記一句口訣 → 降低<b style="color:#fff">認知負荷 (cognitive load)</b>，臨場不用「想」。</p>
+          <div style="font-size:max(18px,1.5vw);font-weight:800;color:#fff;margin:1vh 0;line-height:1.5">1 人 · 1 任務 · 1 工具 · 1 站位 · 1 口訣</div>
+          <p style="font-size:max(18px,1.05vw)">每個人只負責一件事、站固定位置、用固定工具、記一句口訣 → 降低<b style="color:#fff">認知負荷 (cognitive load)</b>，臨場不用「想」。</p>
         </div>
         <div class="card"><div class="edge" style="background:var(--teal)"></div>
           <h3 style="color:var(--teal)">怎麼設計出來的</h3>
@@ -666,26 +667,26 @@
       <div class="grid cols-4">
         <div class="card" style="padding:1.8vh 1.2vw"><div class="edge" style="background:var(--blue)"></div>
           <h3 style="color:var(--blue)">A · 氣道</h3>
-          <p style="font-size:.98vw"><b style="color:#fff">A1 + A2</b>｜站位：<b style="color:#fff">病人頭側</b></p>
-          <p style="font-size:.95vw;margin-top:.7vh">口訣「<b style="color:var(--blue)">Endo, End-tidal, 10-10</b>」：儘早插管與接 EtCO₂；換氣 &lt;10 次/分、EtCO₂ &gt;10。</p>
+          <p style="font-size:max(18px,.98vw)"><b style="color:#fff">A1 + A2</b>｜站位：<b style="color:#fff">病人頭側</b></p>
+          <p style="font-size:max(18px,.95vw);margin-top:.7vh">口訣「<b style="color:var(--blue)">Endo, End-tidal, 10-10</b>」：儘早插管與接 EtCO₂；換氣 &lt;10 次/分、EtCO₂ &gt;10。</p>
         </div>
         <div class="card" style="padding:1.8vh 1.2vw"><div class="edge" style="background:var(--red)"></div>
           <h3 style="color:var(--red)">C · 循環</h3>
-          <p style="font-size:.98vw"><b style="color:#fff">C1 + C2</b>｜站位：<b style="color:#fff">病人一側</b></p>
-          <p style="font-size:.95vw;margin-top:.7vh">口訣「<b style="color:var(--red)">High, non-stop CD</b>」：高品質、不中斷的壓胸與去顫；至少 2 人輪替。</p>
+          <p style="font-size:max(18px,.98vw)"><b style="color:#fff">C1 + C2</b>｜站位：<b style="color:#fff">病人一側</b></p>
+          <p style="font-size:max(18px,.95vw);margin-top:.7vh">口訣「<b style="color:var(--red)">High, non-stop CD</b>」：高品質、不中斷的壓胸與去顫；至少 2 人輪替。</p>
         </div>
         <div class="card" style="padding:1.8vh 1.2vw"><div class="edge" style="background:var(--amber)"></div>
           <h3 style="color:var(--amber)">L · 領導</h3>
-          <p style="font-size:.98vw"><b style="color:#fff">Leader</b>｜站位：<b style="color:#fff">病人腳側</b></p>
-          <p style="font-size:.95vw;margin-top:.7vh">不動手；口訣「<b style="color:var(--amber)">A-C-L-S</b>」派工、「<b style="color:var(--amber)">DABCD²E³</b>」帶 huddle／debrief。</p>
+          <p style="font-size:max(18px,.98vw)"><b style="color:#fff">Leader</b>｜站位：<b style="color:#fff">病人腳側</b></p>
+          <p style="font-size:max(18px,.95vw);margin-top:.7vh">不動手；口訣「<b style="color:var(--amber)">A-C-L-S</b>」派工、「<b style="color:var(--amber)">DABCD²E³</b>」帶 huddle／debrief。</p>
         </div>
         <div class="card" style="padding:1.8vh 1.2vw"><div class="edge" style="background:var(--green)"></div>
           <h3 style="color:var(--green)">S · 支援</h3>
-          <p style="font-size:.98vw"><b style="color:#fff">S1 + S2</b>（2–3 護理師）｜<b style="color:#fff">C 對側</b></p>
-          <p style="font-size:.95vw;margin-top:.7vh">S1 記錄/計時「<b style="color:var(--green)">2-4</b>」(壓胸每 2 分輪替、腎上腺素每 4 分)；S2「<b style="color:var(--green)">I'M Support</b>」給藥/血路。</p>
+          <p style="font-size:max(18px,.98vw)"><b style="color:#fff">S1 + S2</b>（2–3 護理師）｜<b style="color:#fff">C 對側</b></p>
+          <p style="font-size:max(18px,.95vw);margin-top:.7vh">S1 記錄/計時「<b style="color:var(--green)">2-4</b>」(壓胸每 2 分輪替、腎上腺素每 4 分)；S2「<b style="color:var(--green)">I'M Support</b>」給藥/血路。</p>
         </div>
       </div>
-      <div class="callout" style="margin-top:2vh;font-size:1.1vw">
+      <div class="callout" style="margin-top:2vh;font-size:max(18px,1.1vw)">
         <b>把 ACLS 四個字變成站位：</b>A 在頭、C 在側、L 在腳、S 在對側 — 一張圖就能交班，新人第一次進 code 也知道自己該站哪、抓哪個工具。
       </div>
     </div>
@@ -726,7 +727,7 @@
           <div class="m"><div class="v">9→0 秒</div><div class="k">開始壓胸時間</div></div>
           <div class="m"><div class="v">5.2→1.8</div><div class="k">過長中斷 (&gt;10s) 次數</div></div>
         </div>
-        <div class="callout" style="font-size:1.05vw">
+        <div class="callout" style="font-size:max(18px,1.05vw)">
           <b>104 例 OHCA、追蹤 2 年</b>：指標顯著且維持。作者結論：模型<b>可行、可套用、有效</b>；對「存活率」的影響因樣本小，尚待更大型研究。
         </div>
       </div>
@@ -753,10 +754,10 @@
     <p class="sub">2025 AHA 指引 760 條建議中，<span class="hlr">僅 1.4% 屬 Level A（高品質 RCT）</span>— 復甦醫學大多在低證據下做決策</p>
     <div class="body">
       <div class="grid cols-4" style="margin-bottom:2.2vh">
-        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor1">COR 1</span><p style="margin-top:.8vh;font-size:1vw">強建議<br>該做 (Benefit ≫ Risk)</p></div>
-        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor2a">COR 2a</span><p style="margin-top:.8vh;font-size:1vw">中等<br>合理採用</p></div>
-        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor2b">COR 2b</span><p style="margin-top:.8vh;font-size:1vw">弱建議<br>可考慮／未確立</p></div>
-        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor3">COR 3</span><p style="margin-top:.8vh;font-size:1vw">無益 / 有害<br>不建議常規使用</p></div>
+        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor1">COR 1</span><p style="margin-top:.8vh;font-size:max(18px,1vw)">強建議<br>該做 (Benefit ≫ Risk)</p></div>
+        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor2a">COR 2a</span><p style="margin-top:.8vh;font-size:max(18px,1vw)">中等<br>合理採用</p></div>
+        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor2b">COR 2b</span><p style="margin-top:.8vh;font-size:max(18px,1vw)">弱建議<br>可考慮／未確立</p></div>
+        <div class="card" style="padding:1.6vh 1.2vw"><span class="tag cor3">COR 3</span><p style="margin-top:.8vh;font-size:max(18px,1vw)">無益 / 有害<br>不建議常規使用</p></div>
       </div>
       <div class="callout">
         <b>給住院醫師的提醒：</b>「指引沒有強推」不代表「一定不能做」；很多情境（如特殊病因）仍需<span class="hl">臨床判斷</span>。接下來的每一項，我都會標上它的證據等級。
@@ -775,12 +776,12 @@
       <div class="card"><div class="edge"></div>
         <span class="ico">📉</span>
         <h3>不可電擊節律 (PEA / Asystole)</h3>
-        <p style="font-size:1.15vw"><b style="color:#fff">越早越好 — 一有血路就給。</b>早期 adrenaline 與較佳存活相關。這類節律不需等去顫。</p>
+        <p style="font-size:max(18px,1.15vw)"><b style="color:#fff">越早越好 — 一有血路就給。</b>早期 adrenaline 與較佳存活相關。這類節律不需等去顫。</p>
       </div>
       <div class="card"><div class="edge" style="background:var(--amber)"></div>
         <span class="ico">⚡</span>
         <h3>可電擊節律 (VF / pVT)</h3>
-        <p style="font-size:1.15vw"><b style="color:#fff">去顫優先</b>；adrenaline 於<b style="color:var(--amber)">第二次電擊之後</b>再給。先電、先壓，再談藥。</p>
+        <p style="font-size:max(18px,1.15vw)"><b style="color:#fff">去顫優先</b>；adrenaline 於<b style="color:var(--amber)">第二次電擊之後</b>再給。先電、先壓，再談藥。</p>
       </div>
       <div class="callout" style="grid-column:1/3;margin-top:.6vh">
         <b>Vasopressin：</b>不建議單獨或合併取代 adrenaline（無額外好處）。<b>大劑量 adrenaline：</b>不建議。
@@ -833,7 +834,7 @@
           <li><b>已知既存代謝性酸中毒</b></li>
         </ul>
       </div>
-      <div class="callout" style="grid-column:1/3;margin-top:.4vh;font-size:1.1vw">
+      <div class="callout" style="grid-column:1/3;margin-top:.4vh;font-size:max(18px,1.1vw)">
         <b>新興訊號：</b>近期觀察性資料顯示，院前於 PEA/asystole 給 bicarb 或與較佳存活相關 — 但證據不足以改變建議，屬<span class="hla">待研究</span>領域。
       </div>
     </div>
@@ -874,14 +875,14 @@
     <p class="sub">IJCCM 2020 概念：忙碌急診用機械通氣可減少人為誤差、釋放氣道人力 — 但設定要對</p>
     <div class="body">
       <div class="grid cols-3" style="gap:1.4vh 1.3vw">
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">① FiO₂ 100%</h3><p style="font-size:1vw">CPR 期間給純氧，最大化氧輸送。</p></div>
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">② 潮氣量 6–8 mL/kg</h3><p style="font-size:1vw">以理想體重計；避免過度換氣與胃脹。</p></div>
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">③ 呼吸速率 ~10/分</h3><p style="font-size:1vw">與按壓不同步；避免 hyperventilation 升高胸內壓。</p></div>
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">④ PEEP = 0</h3><p style="font-size:1vw">CPR 中歸零，避免妨礙胸廓回彈期的<b style="color:#fff">靜脈回流</b>。</p></div>
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">⑤ Trigger 關閉</h3><p style="font-size:1vw">否則按壓會<b style="color:#fff">誤觸發</b>額外送氣、造成過度換氣。</p></div>
-        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">⑥ Pmax / 壓力警報調高</h3><p style="font-size:1vw">按壓使胸內壓瞬間 &gt; 設定值(35–45)，否則機器無法送氣、狂叫警報。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">① FiO₂ 100%</h3><p style="font-size:max(18px,1vw)">CPR 期間給純氧，最大化氧輸送。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">② 潮氣量 6–8 mL/kg</h3><p style="font-size:max(18px,1vw)">以理想體重計；避免過度換氣與胃脹。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--teal)">③ 呼吸速率 ~10/分</h3><p style="font-size:max(18px,1vw)">與按壓不同步；避免 hyperventilation 升高胸內壓。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">④ PEEP = 0</h3><p style="font-size:max(18px,1vw)">CPR 中歸零，避免妨礙胸廓回彈期的<b style="color:#fff">靜脈回流</b>。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">⑤ Trigger 關閉</h3><p style="font-size:max(18px,1vw)">否則按壓會<b style="color:#fff">誤觸發</b>額外送氣、造成過度換氣。</p></div>
+        <div class="card" style="padding:1.7vh 1.2vw"><h3 style="color:var(--amber)">⑥ Pmax / 壓力警報調高</h3><p style="font-size:max(18px,1vw)">按壓使胸內壓瞬間 &gt; 設定值(35–45)，否則機器無法送氣、狂叫警報。</p></div>
       </div>
-      <div class="callout" style="margin-top:1.8vh;font-size:1.1vw">
+      <div class="callout" style="margin-top:1.8vh;font-size:max(18px,1.1vw)">
         <b>ROSC 之後切換為肺保護策略：</b>目標 <span class="hl">normocapnia</span>、<span class="hl">SpO₂ 92–98%</span>（避免 hyperoxia）、低潮氣量。CPR 期的設定 ≠ ROSC 後的設定。
       </div>
     </div>
@@ -897,15 +898,15 @@
     <div class="body grid cols-3" style="align-content:center">
       <div class="card"><div class="edge" style="background:var(--blue)"></div>
         <h3>ECPR / ECMO <span class="tag cor2a">2a</span></h3>
-        <p style="font-size:1.05vw">對<b style="color:#fff">選定</b>的難治性 OHCA（可逆病因、目擊、短 low-flow）由專責系統執行為<b>合理</b>；現場 ECMO 概念興起，2030 前料有更多指引。</p>
+        <p style="font-size:max(18px,1.05vw)">對<b style="color:#fff">選定</b>的難治性 OHCA（可逆病因、目擊、短 low-flow）由專責系統執行為<b>合理</b>；現場 ECMO 概念興起，2030 前料有更多指引。</p>
       </div>
       <div class="card"><div class="edge" style="background:var(--red)"></div>
         <h3>機械 CPR <span class="tag cor3">常規不建議</span></h3>
-        <p style="font-size:1.05vw">常規使用<b style="color:#fff">無實證益處</b>。僅在人力不足、移動中、導管室、或人徒手按壓有困難/危險（如 CT、後送）時<b>可考慮</b>。</p>
+        <p style="font-size:max(18px,1.05vw)">常規使用<b style="color:#fff">無實證益處</b>。僅在人力不足、移動中、導管室、或人徒手按壓有困難/危險（如 CT、後送）時<b>可考慮</b>。</p>
       </div>
       <div class="card"><div class="edge" style="background:var(--amber)"></div>
         <h3>電擊能量 · 更新</h3>
-        <p style="font-size:1.05vw">心房顫動/撲動之電擊整流，<b style="color:var(--amber)">起始能量提高至 200 J</b>，必要時逐步增加。（AF/AFL cardioversion）</p>
+        <p style="font-size:max(18px,1.05vw)">心房顫動/撲動之電擊整流，<b style="color:var(--amber)">起始能量提高至 200 J</b>，必要時逐步增加。（AF/AFL cardioversion）</p>
       </div>
     </div>
     <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">🤖</span><span>機械 CPR：不會累、不會抱怨、也不會在你最需要的那一刻，剛好去吃飯或上廁所。</span></div>
@@ -934,7 +935,7 @@
           <li><b>神經預後：</b>多模態評估，勿單一指標過早論斷</li>
         </ul>
       </div>
-      <div class="callout" style="grid-column:1/3;margin-top:.4vh;font-size:1.1vw">
+      <div class="callout" style="grid-column:1/3;margin-top:.4vh;font-size:max(18px,1.1vw)">
         <b>「康復出院」才是真正的終點</b> — 新北 11.45% 的數字，靠的正是 ROSC 後這一段的整合照護，不只是壓回心跳。
       </div>
     </div>
@@ -946,14 +947,14 @@
   <section class="slide divider">
     <div class="body" style="display:flex;flex-direction:column;justify-content:center">
       <div class="num" style="background:linear-gradient(120deg,var(--panel2),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent">COR</div>
-      <h2 style="font-size:3.6vw">2025 AHA · OHCA 建議全覽</h2>
+      <h2 style="font-size:max(18px,3.6vw)">2025 AHA · OHCA 建議全覽</h2>
       <p>把 2025 AHA 指引中與成人 OHCA 相關、<b style="color:#fff">所有帶 COR 的建議</b>整理成一份速查表 — BLS、去顫、藥物、氣道、ECPR、特殊病因、系統與 ROSC 後照護。</p>
-      <div style="display:flex;gap:.8vw;flex-wrap:wrap;margin-top:2vh;font-size:1vw">
-        <span class="cb c1" style="font-size:1vw">COR 1 強：該做</span>
-        <span class="cb c2a" style="font-size:1vw">2a 中等：合理</span>
-        <span class="cb c2b" style="font-size:1vw">2b 弱：可考慮/未確立</span>
-        <span class="cb c3" style="font-size:1vw">3·NB 無益</span>
-        <span class="cb c3h" style="font-size:1vw">3·H 有害</span>
+      <div style="display:flex;gap:.8vw;flex-wrap:wrap;margin-top:2vh;font-size:max(18px,1vw)">
+        <span class="cb c1" style="font-size:max(18px,1vw)">COR 1 強：該做</span>
+        <span class="cb c2a" style="font-size:max(18px,1vw)">2a 中等：合理</span>
+        <span class="cb c2b" style="font-size:max(18px,1vw)">2b 弱：可考慮/未確立</span>
+        <span class="cb c3" style="font-size:max(18px,1vw)">3·NB 無益</span>
+        <span class="cb c3h" style="font-size:max(18px,1vw)">3·H 有害</span>
       </div>
     </div>
     <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">📑</span><span>接下來六頁是速查表——投影時大概沒人看得完，但它會是你之後偷偷截圖存手機的那幾頁。</span></div>
@@ -963,7 +964,7 @@
   <!-- COR 1: BLS & HQ-CPR -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (1/6)</div>
-    <h2 style="font-size:2.5vw">BLS 與高品質 CPR</h2>
+    <h2 style="font-size:max(18px,2.5vw)">BLS 與高品質 CPR</h2>
     <p class="corhint">綠 <b>1</b> · 藍 <b>2a</b> · 黃 <b>2b</b> · 橘 <b>3·NB</b> 無益 · 紅 <b>3·H</b> 有害　（右側小字為 LOE 證據等級）</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1006,7 +1007,7 @@
   <!-- COR 2: Defib + Access + Drugs -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (2/6)</div>
-    <h2 style="font-size:2.5vw">去顫 · 血管通路 · 藥物</h2>
+    <h2 style="font-size:max(18px,2.5vw)">去顫 · 血管通路 · 藥物</h2>
     <p class="corhint">大多數藥物證據薄弱；<b>鈣、碳酸氫鈉、鎂、高劑量 epi、vasopressin</b> 皆列 3·NB（常規無益）</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1046,7 +1047,7 @@
   <!-- COR 3: Airway + Monitoring + Mechanical + ECPR -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (3/6)</div>
-    <h2 style="font-size:2.5vw">氣道通氣 · 監測技術 · 機械CPR · ECPR</h2>
+    <h2 style="font-size:max(18px,2.5vw)">氣道通氣 · 監測技術 · 機械CPR · ECPR</h2>
     <p class="corhint">Head-up CPR 與機械 CPR 常規使用皆 <b>3·NB</b>；ECPR 以「系統與選擇」為主軸（2a）</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1081,7 +1082,7 @@
   <!-- COR 4: Cause-specific + Systems -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (4/6)</div>
-    <h2 style="font-size:2.5vw">特殊病因 · 系統 / TOR / 器捐</h2>
+    <h2 style="font-size:max(18px,2.5vw)">特殊病因 · 系統 / TOR / 器捐</h2>
     <p class="corhint">注意唯一的 <b class="hlr">3·H（有害）</b>：未插管者不可用單一 ETCO₂ 數值當終止急救依據</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1118,7 +1119,7 @@
   <!-- COR 5: Post-ROSC oxygenation/ventilation/BP/TTM -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (5/6)</div>
-    <h2 style="font-size:2.5vw">ROSC 後 (1)：氧合 · 通氣 · 血壓 · 溫控</h2>
+    <h2 style="font-size:max(18px,2.5vw)">ROSC 後 (1)：氧合 · 通氣 · 血壓 · 溫控</h2>
     <p class="corhint">TTM 新框架：主動溫控 <b>32–37.5°C</b>（COR 1）＋積極<b>避免發燒</b>；院前快速冷輸液 3·NB</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1150,7 +1151,7 @@
   <!-- COR 6: Post-ROSC angio/seizure/neuroprog/MCS -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>2025 AHA COR 全覽 (6/6)</div>
-    <h2 style="font-size:2.5vw">ROSC 後 (2)：冠脈 · 癲癇 · 神經預後 · MCS</h2>
+    <h2 style="font-size:max(18px,2.5vw)">ROSC 後 (2)：冠脈 · 癲癇 · 神經預後 · MCS</h2>
     <p class="corhint">神經預後：<b>多模態、≥72 小時、排除藥物干擾</b>，永遠別靠單一指標下定論</p>
     <div class="body corwrap">
       <div class="corcol">
@@ -1187,7 +1188,7 @@
   <!-- FOAMED LEAD + BAD/NO-BENEFIT -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>FOAMed 觀點 (1/4) · EMCrit · First10EM · REBEL EM</div>
-    <h2 style="font-size:2.4vw">近五年 FOAMed 怎麼看：無益的介入</h2>
+    <h2 style="font-size:max(18px,2.4vw)">近五年 FOAMed 怎麼看：無益的介入</h2>
     <p class="corhint">三大 EBM 部落格的共同主旋律：除了<b>高品質 CPR＋早期去顫</b>，多數附加介入頂多改善 ROSC，救不回「神經完好的存活」</p>
     <div class="body foam">
       <div class="fcard warn"><h3>鈣 Calcium <span class="trial">COCA · JAMA 2021</span></h3>
@@ -1214,7 +1215,7 @@
   <!-- FOAMED: ROSC up but no neuro benefit -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>FOAMed 觀點 (2/4)</div>
-    <h2 style="font-size:2.4vw">「ROSC 上升，但神經預後沒變好」</h2>
+    <h2 style="font-size:max(18px,2.4vw)">「ROSC 上升，但神經預後沒變好」</h2>
     <p class="corhint">最容易騙人的一類結果：surrogate 端點（ROSC、入院）漂亮，patient-oriented 端點（神經完好存活）不動</p>
     <div class="body foam">
       <div class="fcard warn"><h3>腎上腺素 Epinephrine <span class="trial">PARAMEDIC2</span></h3>
@@ -1241,7 +1242,7 @@
   <!-- FOAMED: promising / practice-changing -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>FOAMed 觀點 (3/4)</div>
-    <h2 style="font-size:2.4vw">有前景 / 正在改變實務</h2>
+    <h2 style="font-size:max(18px,2.4vw)">有前景 / 正在改變實務</h2>
     <p class="corhint">少數真的可能改善 patient-oriented 結果的方向 — 但幾乎都取決於<b>病人選擇、時效與系統</b></p>
     <div class="body foam">
       <div class="fcard good"><h3>DSED / Vector change <span class="trial">DOSE-VF · NEJM 2022</span></h3>
@@ -1268,7 +1269,7 @@
   <!-- FOAMED: post-arrest debates -->
   <section class="slide">
     <div class="kicker"><span class="dot"></span>FOAMed 觀點 (4/4)</div>
-    <h2 style="font-size:2.4vw">ROSC 之後的爭議與共識</h2>
+    <h2 style="font-size:max(18px,2.4vw)">ROSC 之後的爭議與共識</h2>
     <p class="corhint">溫控與氧合/血壓的大型 RCT，把過去十年的「越激進越好」信念，一個個拉回中庸</p>
     <div class="body foam">
       <div class="fcard warn"><h3>目標溫度 <span class="trial">TTM2 · NEJM 2021</span></h3>
@@ -1298,11 +1299,11 @@
     <h2>帶走這五句話</h2>
     <p class="sub">回到臨床，這是你今晚值班用得上的重點</p>
     <div class="body grid cols-2" style="align-content:center;gap:1.6vh 1.5vw">
-      <div class="card"><div class="edge"></div><h3>1 · 系統勝過英雄</h3><p style="font-size:1.1vw">新北從 3.1% → 11.45% 靠的是 EMTP、線上醫療指導、給藥率的系統投資與生存之鏈整合。</p></div>
-      <div class="card"><div class="edge" style="background:var(--teal)"></div><h3>2 · CPR 是可量測的團隊技術</h3><p style="font-size:1.1vw">固定角色、閉環溝通、CCF &gt;80%、pause &lt;10 秒、看 capnography；越練越快。</p></div>
-      <div class="card"><div class="edge" style="background:var(--red)"></div><h3>3 · 別做沒用的事</h3><p style="font-size:1.1vw">常規<b>鈣 (COCA)</b> 與<b>碳酸氫鈉</b>皆 COR 3；只在明確適應症使用。</p></div>
-      <div class="card"><div class="edge" style="background:var(--amber)"></div><h3>4 · 難治性 VF 有新招</h3><p style="font-size:1.1vw">3 次電擊仍 VF → 換向量或 <b>DSED</b>（DOSE VF：存活 13%→30%），COR 2b。</p></div>
-      <div class="card" style="grid-column:1/3"><div class="edge" style="background:var(--purple)"></div><h3>5 · 細節決定成敗</h3><p style="font-size:1.1vw">腎上腺素時機（不可電擊越早越好）、呼吸器六轉盤（PEEP 0、trigger 關、Pmax 調高）、ROSC 後避免 hyperoxia 與發燒 — 這些小事加起來就是「康復出院」。</p></div>
+      <div class="card"><div class="edge"></div><h3>1 · 系統勝過英雄</h3><p style="font-size:max(18px,1.1vw)">新北從 3.1% → 11.45% 靠的是 EMTP、線上醫療指導、給藥率的系統投資與生存之鏈整合。</p></div>
+      <div class="card"><div class="edge" style="background:var(--teal)"></div><h3>2 · CPR 是可量測的團隊技術</h3><p style="font-size:max(18px,1.1vw)">固定角色、閉環溝通、CCF &gt;80%、pause &lt;10 秒、看 capnography；越練越快。</p></div>
+      <div class="card"><div class="edge" style="background:var(--red)"></div><h3>3 · 別做沒用的事</h3><p style="font-size:max(18px,1.1vw)">常規<b>鈣 (COCA)</b> 與<b>碳酸氫鈉</b>皆 COR 3；只在明確適應症使用。</p></div>
+      <div class="card"><div class="edge" style="background:var(--amber)"></div><h3>4 · 難治性 VF 有新招</h3><p style="font-size:max(18px,1.1vw)">3 次電擊仍 VF → 換向量或 <b>DSED</b>（DOSE VF：存活 13%→30%），COR 2b。</p></div>
+      <div class="card" style="grid-column:1/3"><div class="edge" style="background:var(--purple)"></div><h3>5 · 細節決定成敗</h3><p style="font-size:max(18px,1.1vw)">腎上腺素時機（不可電擊越早越好）、呼吸器六轉盤（PEEP 0、trigger 關、Pmax 調高）、ROSC 後避免 hyperoxia 與發燒 — 這些小事加起來就是「康復出院」。</p></div>
     </div>
     <div class="quip"><span class="lbl">黑色幽默</span><span class="skull">💄</span><span>如果今天只記得一件事：別在告別式上補妝——也就是，別再對每個 code 都反射性地推鈣。</span></div>
     <div class="foot"><span class="tag">SUMMARY</span><span>Take-home messages</span></div>
